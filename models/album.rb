@@ -1,5 +1,6 @@
 require( 'pg' )
 require_relative('../db/sql_runner')
+require('pry-byebug')
 
 class Album
 
@@ -31,4 +32,12 @@ class Album
     return result
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM albums WHERE id = #{id}"
+    album = SqlRunner.run(sql)
+    result = Album.new(album.first)
+    return result
+  end
+
 end
+

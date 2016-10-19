@@ -3,13 +3,4 @@ require( 'sinatra/contrib/all' )
 require( 'pry-byebug' )
 require_relative('./models/album') 
 
-#INDEX
-
-
-#NEW
-
-
-#CREATE
-
-
-#POST
+require_relative('./controllers/album_controller.rb')
