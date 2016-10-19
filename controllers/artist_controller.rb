@@ -1,6 +1,4 @@
 
-
-
 #INDEX
 get "/artists" do
    @artists = Artist.all()
