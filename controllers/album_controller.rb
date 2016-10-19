@@ -23,3 +23,14 @@ get "/albums/:id" do
   @album = Album.find(params[:id])
   erb(:'albums/show')
 end
+
+#EDIT 
+get "/albums/:id/edit" do
+  @album = Album.find(params[:id])
+  @artists = Artist.all()
+  erb(:'albums/edit')
+end
+
+
+
+
